@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ДОКУМЕНТИЩЕ</title>
+</head>
+<body>
+  <h1>
+    АВТОБУСИЩЕ
+  </h1>
+  <div class="car">
+    <div class="body"></div>
+    <div class="roof"></div>
+    <div class="front-window"></div>
+    <div class="back-window"></div>
+    <div class="front-wheel"></div>
+    <div class="back-wheel"></div>
+  </div>
+</body>
+</html>
+<style>
+.car {
+  position: absolute;
+  left: -200px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 10px;
+  animation: drive 5s forwards;
+}
+
+.body {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 80px;
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.roof {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.front-window {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.back-window {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.front-wheel,
+.back-wheel {
+  position: absolute;
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.front-wheel {
+  left: 20px;
+}
+
+.back-wheel {
+  right: 20px;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(calc(100vw - 50px));
+  }
+}
+</style>
